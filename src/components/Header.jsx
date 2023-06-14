@@ -2,7 +2,7 @@ import ToggleTheme from './ToggleTheme';
 
 function Header() {
   return (
-    <header className="w-full bg-white/30 dark:bg-black/30 h-20 flex flex-col justify-center fixed">
+    <header className="w-full bg-white/30 dark:bg-black/30 h-20 flex flex-col justify-center fixed lg:shadow-lg">
       <div className="flex justify-between items-center container mx-auto">
         <p className="text-pink-700 font-bold lg:text-xl">
           Juan Antonio Martín

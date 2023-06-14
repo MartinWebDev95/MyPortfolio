@@ -1,8 +1,13 @@
+import ChangeLanguage from './components/ChangeLanguage';
 import Header from './components/Header';
 
 function Portfolio() {
   return (
-    <Header />
+    <>
+      <Header />
+      <main />
+      <ChangeLanguage />
+    </>
   );
 }
 
