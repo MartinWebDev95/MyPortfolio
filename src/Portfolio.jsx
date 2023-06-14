@@ -1,6 +1,8 @@
+import Header from './components/Header';
+
 function Portfolio() {
   return (
-    <h1>Mi Portfolio</h1>
+    <Header />
   );
 }
 

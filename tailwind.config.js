@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        fira: ['Fira Sans', 'sans-serif'],
+        space: ['Space Mono', 'monospace'],
       },
     },
   },
