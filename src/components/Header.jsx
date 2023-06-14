@@ -1,10 +1,12 @@
+import ToggleTheme from './ToggleTheme';
+
 function Header() {
   return (
-    <header className="w-full bg-black/30 h-20 flex flex-col justify-center fixed">
-      <ul className="flex justify-between items-center container mx-auto">
-        <li className="text-pink-700 font-bold lg:text-xl">
+    <header className="w-full bg-white/30 dark:bg-black/30 h-20 flex flex-col justify-center fixed">
+      <div className="flex justify-between items-center container mx-auto">
+        <p className="text-pink-700 font-bold lg:text-xl">
           Juan Antonio Martín
-        </li>
+        </p>
 
         <nav>
           <ul className="flex justify-center items-center gap-8">
@@ -35,12 +37,11 @@ function Header() {
           </ul>
         </nav>
 
-        <li>
-          <button type="button" className="text-pink-700 font-bold lg:text-xl">
-            Theme
-          </button>
-        </li>
-      </ul>
+        <div>
+          <ToggleTheme />
+        </div>
+
+      </div>
     </header>
   );
 }
