@@ -4,7 +4,7 @@ function ToggleTheme() {
   const { theme, handleChangeTheme } = useThemeContext();
 
   return (
-    <div className="flex items-center justify-center w-full gap-4">
+    <div className="flex items-center justify-center w-full gap-2 md:gap-4">
       <svg width="19" height="19" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.167 15.833a.833.833 0 0 1 .833.834v.833a.833.833 0 0 1-1.667 0v-.833a.833.833 0 0 1 .834-.834ZM3.75 13.75a.833.833 0 0 1 .59 1.422l-1.25 1.25a.833.833 0 0 1-1.18-1.178l1.25-1.25a.833.833 0 0 1 .59-.244Zm10.833 0c.221 0 .433.088.59.244l1.25 1.25a.833.833 0 0 1-1.179 1.178l-1.25-1.25a.833.833 0 0 1 .59-1.422ZM9.167 5a4.167 4.167 0 1 1 0 8.334 4.167 4.167 0 0 1 0-8.334Zm-7.5 3.333a.833.833 0 0 1 0 1.667H.833a.833.833 0 1 1 0-1.667h.834Zm15.833 0a.833.833 0 0 1 0 1.667h-.833a.833.833 0 0 1 0-1.667h.833Zm-1.667-6.666a.833.833 0 0 1 .59 1.422l-1.25 1.25a.833.833 0 1 1-1.179-1.178l1.25-1.25a.833.833 0 0 1 .59-.244Zm-13.333 0c.221 0 .433.088.59.244l1.25 1.25a.833.833 0 0 1-1.18 1.178L1.91 3.09a.833.833 0 0 1 .59-1.422ZM9.167 0A.833.833 0 0 1 10 .833v.834a.833.833 0 1 1-1.667 0V.833A.833.833 0 0 1 9.167 0Z" fill="#be185d" />
 
@@ -12,7 +12,7 @@ function ToggleTheme() {
 
       <label
         htmlFor="theme"
-        className="relative h-7 w-12 inline-block"
+        className="relative h-6 w-12 inline-block"
         onClick={handleChangeTheme}
       >
 
@@ -23,7 +23,7 @@ function ToggleTheme() {
           className="hidden"
         />
 
-        <div className={`absolute cursor-pointer bottom-0 left-0 top-0 right-0 bg-pink-700 rounded-full lg:hover:bg-blue-600 transition-all duration-300 ease-in-out before:absolute before:h-5 before:w-5 before:bg-white before:top-1 before:left-1 before:rounded-full ${theme === 'dark' ? 'before:translate-x-5' : 'before:translate-x-0'} before:transition-all before:duration-300 before:ease-in-out`} />
+        <div className={`absolute cursor-pointer bottom-0 left-0 top-0 right-0 bg-pink-700 rounded-full lg:hover:bg-blue-600 transition-all duration-300 ease-in-out before:absolute before:h-4 before:w-4 before:bg-white before:top-1 before:left-1 before:rounded-full ${theme === 'dark' ? 'before:translate-x-6' : 'before:translate-x-0'} before:transition-all before:duration-300 before:ease-in-out`} />
       </label>
 
       <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
