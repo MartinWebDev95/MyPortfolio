@@ -8,11 +8,11 @@ function ChangeLanguage() {
   };
 
   return (
-    <footer className={`fixed bottom-0 left-0 dark:bg-black/30 bg-white/30 w-full shadow-lg flex z-10 ${isVisible ? 'h-20' : 'h-0'} transition-all duration-300 ease-in-out`}>
+    <footer className={`sticky bottom-0 left-0 dark:bg-black bg-white w-full shadow-lg flex z-10 ${isVisible ? 'h-20' : 'h-0'} transition-all duration-300 ease-in-out`}>
 
       <button
         type="button"
-        className={`text-pink-700 font-bold absolute right-1/2 flex items-center justify-center ${isVisible ? 'bottom-20' : 'bottom-0'} dark:bg-black/30 bg-white/30 w-14 h-8 rounded-t-full transition-all duration-300 ease-in-out group`}
+        className={`text-pink-700 font-bold absolute right-1/2 flex items-center justify-center ${isVisible ? 'bottom-20' : 'bottom-0'} dark:bg-black bg-white w-14 h-8 rounded-t-full transition-all duration-300 ease-in-out group`}
         onClick={() => setIsVisible(!isVisible)}
       >
         {isVisible ? (
