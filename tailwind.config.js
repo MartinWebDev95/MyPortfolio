@@ -11,6 +11,9 @@ export default {
       fontFamily: {
         space: ['Space Mono', 'monospace'],
       },
+      gridTemplateColumns: {
+        fluid: 'repeat(auto-fit, minmax(20rem, 1fr))',
+      },
     },
   },
   plugins: [],
