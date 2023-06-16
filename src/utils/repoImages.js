@@ -1,22 +1,22 @@
 const repoImages = {
   AudiophileEcommerce: {
-    image: '/images/audiophile.png',
+    image: '/assets/audiophile.png',
     title: 'Audiophile E-commerce',
   },
   DisneyPlusClone: {
-    image: '/images/disneyPlusClone.png',
+    image: '/assets/disneyPlusClone.png',
     title: 'Disney Plus Clone',
   },
   TrelloWeb: {
-    image: '/images/trelloWeb.png',
+    image: '/assets/trelloWeb.png',
     title: 'Trello Web',
   },
   Kanban: {
-    image: '/images/kanban.png',
+    image: '/assets/kanban.png',
     title: 'Kanban Task Management',
   },
   StaticJobsListingReact: {
-    image: '/images/staticJobsListing.png',
+    image: '/assets/staticJobsListing.png',
     title: 'Static Jobs Listing',
   },
 };
