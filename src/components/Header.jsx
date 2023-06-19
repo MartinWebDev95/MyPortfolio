@@ -13,10 +13,6 @@ function Header() {
       <div className="flex justify-between items-center container mx-auto px-4 md:px-0">
         <MenuMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
-        <p className="text-pink-700 font-bold lg:text-xl">
-          Juan Antonio Martín
-        </p>
-
         <Navigation isMenuOpen={isMenuOpen} />
 
         <div>
