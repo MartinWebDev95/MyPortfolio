@@ -15,9 +15,13 @@ const repoImages = {
     image: '/assets/kanban.png',
     title: 'Kanban Task Management',
   },
-  StaticJobsListingReact: {
+  StarkLanding: {
+    image: '/assets/stark.png',
+    title: 'Stark Web',
+  },
+  Sneakers: {
     image: '/assets/staticJobsListing.png',
-    title: 'Static Jobs Listing',
+    title: 'Sneakers',
   },
 };
 
