@@ -14,6 +14,43 @@ export default {
       gridTemplateColumns: {
         fluid: 'repeat(auto-fit, minmax(20rem, 1fr))',
       },
+      keyframes: {
+        blobs_animation: {
+          from: {
+            transform: 'rotate(0deg) scale(2)',
+          },
+
+          to: {
+            transform: 'rotate(360deg) scale(2)',
+          },
+        },
+        title_animation: {
+          from: {
+            opacity: 0,
+          },
+
+          to: {
+            opacity: 1,
+          },
+        },
+        socials_animation: {
+          from: {
+            transform: 'translateY(8rem)',
+            opacity: 0,
+          },
+
+          to: {
+            transform: 'translateY(0rem)',
+            opacity: 1,
+          },
+        },
+      },
+      animation: {
+        blobs_animation_one: 'blobs_animation 30s linear infinite both',
+        blobs_animation_two: 'blobs_animation 50s linear infinite both',
+        title_animation: 'title_animation 2s linear 1 both',
+        socials_animation: 'socials_animation 1s linear .5s 1 both',
+      },
     },
   },
   plugins: [],
