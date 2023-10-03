@@ -1,23 +1,23 @@
+import Blobs from './components/Blobs';
 import ChangeLanguage from './components/ChangeLanguage';
 import Header from './components/Header';
-import ListOfProjects from './components/ListOfProjects';
-import useProjects from './hooks/useProjects';
+import HeroSection from './components/HeroSection';
+import SectionProjects from './components/SectionProjects';
+import SectionSkills from './components/SectionSkills';
 
 function Portfolio() {
-  const { projects } = useProjects();
-
   return (
     <>
+      <Blobs />
+
       <Header />
 
       <main className="container mx-auto px-4 md:px-0">
-        <section className="bg-white/20 dark:bg-black/20 rounded-lg shadow-lg my-4">
-          <h2 className="text-center uppercase font-bold text-pink-700 text-2xl pt-4">
-            Projects
-          </h2>
+        <HeroSection />
 
-          <ListOfProjects projects={projects} />
-        </section>
+        <SectionProjects />
+
+        <SectionSkills />
       </main>
 
       <ChangeLanguage />
