@@ -1,3 +1,5 @@
+import SocialButtons from './SocialButtons';
+
 function HeroSection() {
   return (
     <section className="h-screen grid place-content-center">
@@ -12,6 +14,8 @@ function HeroSection() {
           My name is Juan Antonio Martín and I&apos;m looking for a job as frontend developer
         </h2>
       </div>
+
+      <SocialButtons />
     </section>
   );
 }
