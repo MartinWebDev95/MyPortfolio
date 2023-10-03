@@ -5,7 +5,7 @@ function Navigation({ isMenuOpen }) {
         <li>
           <a
             href="#"
-            className="text-pink-700 font-bold lg:text-xl hover:text-blue-600 transition-all duration-300 ease-in-out"
+            className="text-black dark:text-white font-bold lg:text-xl hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-300 ease-in-out"
           >
             Projects
           </a>
@@ -14,7 +14,7 @@ function Navigation({ isMenuOpen }) {
         <li>
           <a
             href="#"
-            className="text-pink-700 font-bold lg:text-xl hover:text-blue-600 transition-all duration-300 ease-in-out"
+            className="text-black dark:text-white font-bold lg:text-xl hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-300 ease-in-out"
           >
             Skills
           </a>
@@ -23,7 +23,7 @@ function Navigation({ isMenuOpen }) {
         <li>
           <a
             href="#"
-            className="text-pink-700 font-bold lg:text-xl hover:text-blue-600 transition-all duration-300 ease-in-out"
+            className="text-black dark:text-white font-bold lg:text-xl hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-300 ease-in-out"
           >
             Contact
           </a>
