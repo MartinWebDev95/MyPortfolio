@@ -3,6 +3,7 @@ import repoImages from '../utils/repoImages';
 
 const useProjects = () => {
   const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getProjects = async () => {
     try {
@@ -34,10 +35,13 @@ const useProjects = () => {
         ));
 
         setProjects(projectsWithImages);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
-  return { projects };
+  return { projects, isLoading };
 };
 
 export default useProjects;
