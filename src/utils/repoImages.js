@@ -20,7 +20,7 @@ const repoImages = {
     title: 'Stark Web',
   },
   Sneakers: {
-    image: '/assets/staticJobsListing.png',
+    image: '/assets/sneakers.png',
     title: 'Sneakers',
   },
 };
