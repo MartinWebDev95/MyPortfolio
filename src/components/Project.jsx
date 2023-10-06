@@ -1,47 +1,40 @@
-function Project({ project }) {
-  return (
-    <div className="rounded-lg bg-white dark:bg-black shadow-lg">
-      <div>
-        <img src={project.repoImage} alt={project.repoTitle} className="rounded-t-lg" />
-      </div>
+import Link from './Link';
+import ListOfTopics from './ListOfTopics';
 
-      <div className="p-4 h-auto">
-        <h2 className="text-pink-700 text-base md:text-xl font-bold mb-4">
+function Project({ project, imgRef }) {
+  return (
+    <div
+      ref={imgRef}
+      className="group/project min-w-full relative overflow-hidden"
+    >
+      <img
+        src={project.repoImage}
+        alt={project.repoTitle}
+        className="rounded-tr-3xl rounded-br-3xl"
+      />
+
+      <div className="absolute bottom-0 left-0 w-full h-full lg:h-auto px-8 py-6 bg-white/40 dark:bg-black/60 rounded-br-3xl rounded-tr-3xl lg:rounded-tr-none backdrop-blur-lg scale-y-0 group-hover/project:scale-y-100 origin-bottom transition-transform duration-300 ease-in-out grid place-content-center lg:place-content-start">
+        <h2 className="text-black dark:text-white text-base md:text-2xl font-bold mb-4 hidden md:block">
           {project.repoTitle}
         </h2>
 
-        <p className="text-pink-700">{project.description}</p>
+        <p className="text-black dark:text-white text-sm md:text-lg hidden md:block">
+          {project.description}
+        </p>
 
-        <div className="flex flex-col flex-end">
-          <ul className="flex flex-wrap gap-2 my-4">
-            {project.topics.map((topic) => (
-              <li
-                key={topic}
-                className="bg-pink-700 text-white dark:text-black rounded-full w-fit px-2"
-              >
-                {topic}
-              </li>
-            ))}
-          </ul>
+        <div className="flex md:flex-col flex-end md:gap-6 md:mt-6">
+          <ListOfTopics topics={project.topics} />
 
           <div className="flex items-center gap-4">
-            <a
+            <Link
+              text="Github"
               href={project.html_url}
-              target="_blank"
-              className="rounded-full bg-transparent border-2 border-pink-700 text-pink-700 py-1 px-3 hover:bg-blue-600 hover:text-white dark:hover:text-black hover:border-white dark:hover:border-black transition-all duration-300 ease-in-out"
-              rel="noreferrer noopener"
-            >
-              Github
-            </a>
+            />
 
-            <a
+            <Link
+              text="Live"
               href={project.homepage}
-              target="_blank"
-              className="rounded-full bg-transparent border-2 border-pink-700 text-pink-700 py-1 px-3 hover:bg-blue-600 hover:text-white dark:hover:text-black hover:border-white dark:hover:border-black transition-all duration-300 ease-in-out"
-              rel="noreferrer noopener"
-            >
-              Live Demo
-            </a>
+            />
           </div>
         </div>
       </div>
