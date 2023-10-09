@@ -23,6 +23,10 @@ const repoImages = {
     image: '/assets/sneakers.png',
     title: 'Sneakers',
   },
+  MyPortfolio: {
+    image: '/assets/portfolio.png',
+    title: 'Portfolio',
+  },
 };
 
 export default repoImages;
