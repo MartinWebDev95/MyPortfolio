@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ATROPOS */
+.atropos {
+  position: relative;
+  perspective: 1200px;
+  transform: translateZ(0);
+}
+
+.atropos-img{
+  position: absolute;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  max-width: none;
+}
+
+/* SPINNER */
 .sk-folding-cube {
   margin: 20px auto;
   width: 40px;
