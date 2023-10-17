@@ -2,7 +2,7 @@ import Atropos from 'atropos/react';
 
 function SectionSkills() {
   return (
-    <section className="container mx-auto px-4 md:px-0 my-20">
+    <section id="Skills" className="container mx-auto px-4 md:px-0 my-20">
       <h2
         className="text-center uppercase font-bold text-black dark:text-white text-3xl lg:text-4xl mb-6 lg:mb-8"
       >
