@@ -1,8 +1,14 @@
-function NavigationLink({ text }) {
+import { Link } from 'react-scroll';
+
+function NavigationLink({ text, setIsMenuOpen }) {
   return (
     <li className="group relative cursor-pointer transition-all duration-300 ease-in-out">
-      <a
-        href="#"
+      <Link
+        to={text}
+        smooth
+        offset={-100}
+        duration={500}
+        onClick={() => setIsMenuOpen(false)}
         className="flex items-center text-black dark:text-white font-bold lg:text-xl relative"
       >
         {text.split('').map((letter, index) => (
@@ -26,7 +32,7 @@ function NavigationLink({ text }) {
             </span>
           ))}
         </div>
-      </a>
+      </Link>
     </li>
   );
 }
