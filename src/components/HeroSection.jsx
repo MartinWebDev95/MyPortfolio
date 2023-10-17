@@ -2,7 +2,7 @@ import SocialButtons from './SocialButtons';
 
 function HeroSection() {
   return (
-    <section className="container mx-auto px-4 md:px-0 h-screen grid place-content-center">
+    <section id="Home" className="container mx-auto px-4 md:px-0 h-screen grid place-content-center">
       <div className="overflow-hidden">
         <h1 className="text-center uppercase font-bold text-5xl md:text-6xl lg:text-7xl dark:text-white text-black animate-title_animation origin-top">
           Hi, I&apos;m a Junior Frontend Developer
