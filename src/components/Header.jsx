@@ -13,7 +13,7 @@ function Header() {
       <div className="flex justify-between items-center container mx-auto px-4 md:px-0">
         <MenuMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
-        <Navigation isMenuOpen={isMenuOpen} />
+        <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
         <div>
           <ToggleTheme />
