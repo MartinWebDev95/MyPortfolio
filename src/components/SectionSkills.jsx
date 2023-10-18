@@ -2,9 +2,9 @@ import Atropos from 'atropos/react';
 
 function SectionSkills() {
   return (
-    <section id="Skills" className="container mx-auto px-4 md:px-0 my-20">
+    <section id="Skills" className="container mx-auto px-4 md:px-0 my-24">
       <h2
-        className="text-center uppercase font-bold text-black dark:text-white text-3xl lg:text-4xl mb-6 lg:mb-8"
+        className="text-center uppercase font-bold text-black dark:text-white text-3xl lg:text-4xl mb-6 lg:mb-16"
       >
         Skills
       </h2>
@@ -15,7 +15,7 @@ function SectionSkills() {
           activeOffset={40}
           shadowScale={1.1}
         >
-          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-lg backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-lg before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-orange-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
+          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-3xl backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-3xl before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-orange-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
             <img className="w-20 atropos-img" src="/assets/html.png" alt="HTML" data-atropos-offset="-10" />
           </li>
         </Atropos>
@@ -25,7 +25,7 @@ function SectionSkills() {
           activeOffset={40}
           shadowScale={1.1}
         >
-          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-lg backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-lg before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
+          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-3xl backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-3xl before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
             <img className="w-20 absolute" src="/assets/react.png" alt="React" data-atropos-offset="-10" />
           </li>
         </Atropos>
@@ -35,7 +35,7 @@ function SectionSkills() {
           activeOffset={40}
           shadowScale={1.1}
         >
-          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-lg backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-lg before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
+          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-3xl backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-3xl before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
             <img className="w-20 absolute" src="/assets/js.png" alt="JavaScript" data-atropos-offset="-10" />
           </li>
         </Atropos>
@@ -45,7 +45,7 @@ function SectionSkills() {
           activeOffset={40}
           shadowScale={1.1}
         >
-          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-lg backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-lg before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-blue-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
+          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-3xl backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-3xl before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-blue-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
             <img className="w-20 absolute" src="/assets/css.png" alt="CSS" data-atropos-offset="-10" />
           </li>
         </Atropos>
@@ -55,7 +55,7 @@ function SectionSkills() {
           activeOffset={40}
           shadowScale={1.1}
         >
-          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-lg backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-lg before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-black/30 dark:via-white/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
+          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-3xl backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-3xl before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-black/30 dark:via-white/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
 
             <svg
               width="581"
@@ -139,7 +139,7 @@ function SectionSkills() {
           activeOffset={40}
           shadowScale={1.1}
         >
-          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-lg backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-lg before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-pink-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
+          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center py-8 rounded-3xl backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-3xl before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-pink-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
             <img className="w-20 absolute" src="/assets/styledComponents.png" alt="Styled Components" data-atropos-offset="-10" />
           </li>
         </Atropos>
@@ -149,7 +149,7 @@ function SectionSkills() {
           activeOffset={40}
           shadowScale={1.1}
         >
-          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center rounded-lg backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-lg before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
+          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center rounded-3xl backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-3xl before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 262 33" className="absolute w-full px-2 lg:px-8" data-atropos-offset="-10">
               <g fillRule="evenodd" clipPath="url(#prefix__clip0)" clipRule="evenodd">
@@ -169,7 +169,7 @@ function SectionSkills() {
           activeOffset={40}
           shadowScale={1.1}
         >
-          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center rounded-lg backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-lg before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-green-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
+          <li className="dark:bg-black/50 bg-white/50 flex items-center justify-center rounded-3xl backdrop-blur-lg shadow-lg border-2 border-black/20 aspect-square lg:aspect-video overflow-hidden relative before:absolute before:w-full before:h-full before:rounded-3xl before:opacity-0 before:hover:bg-gradient-to-r from-transparent via-green-500/30 to-transparent before:hover:opacity-100 before:transition-opacity before:duration-500 before:ease-in-out" data-atropos-offset="-5">
 
             <svg viewBox="0 0 581 113" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute w-full px-2 lg:px-8" data-atropos-offset="-10">
               <path className="dark:fill-white fill-black" d="M151.397 66.7608C151.996 72.3621 157.091 81.9642 171.877 81.9642C184.764 81.9642 190.959 73.7624 190.959 65.7607C190.959 58.559 186.063 52.6577 176.373 50.6571L169.379 49.1569C166.682 48.6568 164.884 47.1565 164.884 44.7559C164.884 41.9552 167.681 39.8549 171.178 39.8549C176.772 39.8549 178.87 43.5556 179.27 46.4564L190.359 43.9558C189.76 38.6546 185.064 29.7527 171.078 29.7527C160.488 29.7527 152.696 37.0543 152.696 45.8561C152.696 52.7576 156.991 58.4591 166.482 60.5594L172.976 62.0598C176.772 62.8599 178.271 64.6605 178.271 66.8609C178.271 69.4615 176.173 71.762 171.777 71.762C165.983 71.762 163.085 68.1611 162.786 64.2602L151.397 66.7608Z" />
