@@ -1,12 +1,15 @@
 import ItemContent from './ItemContent';
+import useNearElement from '../hooks/useNearElement';
 
 function SectionContact() {
+  const { visorRef, isVisible } = useNearElement();
+
   return (
     <section
       id="Contact"
       className="container mx-auto px-4 md:px-0 mb-4"
     >
-      <div className="bg-white/30 dark:bg-black/30 rounded-3xl border-white/30 dark:border-black/30 backdrop-blur-lg pt-8 pb-4 border-2 px-4 sm:grid sm:place-content-center shadow-none hover:shadow-lg transition-all duration-700 ease-in-out">
+      <div className={`${isVisible ? 'bg-white/30 dark:bg-black/30 rounded-3xl border-white/30 dark:border-black/30 backdrop-blur-lg shadow-lg' : 'bg-transparent rounded-none border-transparent backdrop-blur-none shadow-none'} pt-8 pb-4 border-2 px-4 sm:grid sm:place-content-center transition-all duration-700 ease-in-out`}>
         <h2
           className="text-center uppercase font-bold text-black dark:text-white text-3xl lg:text-4xl mb-6 lg:mb-8"
         >
@@ -40,13 +43,14 @@ function SectionContact() {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="group/link relative font-bold text-lg text-black dark:text-white hover:bg-black hover:text-white hover:dark:bg-white hover:dark:text-black rounded-lg border-2 dark:border-white border-black px-4 py-1 hover:scale-110 transition-all ease-in-out duration-300"
+              className="group/link relative font-bold text-lg text-black dark:text-white hover:bg-black hover:text-white hover:dark:bg-white hover:dark:text-black rounded-lg border-2 dark:border-white border-black px-4 py-1 transition-all ease-in-out duration-300"
             >
               <ItemContent value="Send" />
             </button>
           </div>
         </form>
       </div>
+      <div ref={visorRef} />
     </section>
   );
 }
