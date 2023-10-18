@@ -1,4 +1,4 @@
-import Link from './Link';
+import WebLink from './WebLink';
 import ListOfTopics from './ListOfTopics';
 
 function Project({ project, imgRef }) {
@@ -26,12 +26,12 @@ function Project({ project, imgRef }) {
           <ListOfTopics topics={project.topics} />
 
           <div className="flex items-center gap-4">
-            <Link
+            <WebLink
               text="Github"
               href={project.html_url}
             />
 
-            <Link
+            <WebLink
               text="Live"
               href={project.homepage}
             />
