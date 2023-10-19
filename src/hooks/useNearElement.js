@@ -14,7 +14,7 @@ const useNearElement = () => {
       }
     };
 
-    const observer = new IntersectionObserver(onChange, { rootMargin: '150px' });
+    const observer = new IntersectionObserver(onChange, { rootMargin: '450px' });
 
     // If the ref element exists then observe it
     if (visorRef.current) observer.observe(visorRef.current);
