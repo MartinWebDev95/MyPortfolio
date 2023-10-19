@@ -1,8 +1,27 @@
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 import ItemContent from './ItemContent';
 import useNearElement from '../hooks/useNearElement';
 
 function SectionContact() {
+  const form = useRef();
   const { visorRef, isVisible } = useNearElement();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_PUBLIC_KEY,
+    )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
 
   return (
     <section
@@ -16,7 +35,19 @@ function SectionContact() {
           Contact
         </h2>
 
-        <form action="" method="post" className="flex flex-col gap-4">
+        <form ref={form} className="flex flex-col gap-4" onSubmit={handleSubmit}>
+          <label className="flex flex-col gap-2" htmlFor="email">
+            <span className="text-black dark:text-white font-bold">Name:</span>
+
+            <input
+              type="text"
+              name="username"
+              id="username"
+              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
+              placeholder="Your name"
+            />
+          </label>
+
           <label className="flex flex-col gap-2" htmlFor="topic">
             <span className="text-black dark:text-white font-bold">Topic:</span>
 
@@ -24,7 +55,20 @@ function SectionContact() {
               type="text"
               name="topic"
               id="topic"
-              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2"
+              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
+              placeholder="Topic of the email"
+            />
+          </label>
+
+          <label className="flex flex-col gap-2" htmlFor="email">
+            <span className="text-black dark:text-white font-bold">Email:</span>
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
+              placeholder="Your email"
             />
           </label>
 
@@ -36,7 +80,8 @@ function SectionContact() {
               id="message"
               cols="30"
               rows="10"
-              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2"
+              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
+              placeholder="Write your message"
             />
           </label>
 
