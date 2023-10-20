@@ -1,5 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import toast from 'react-hot-toast';
 import ItemContent from './ItemContent';
 import useNearElement from '../hooks/useNearElement';
 
@@ -10,17 +11,23 @@ function SectionContact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
+    // Send the email
+    const sendEmail = emailjs.sendForm(
       import.meta.env.VITE_SERVICE_ID,
       import.meta.env.VITE_TEMPLATE_ID,
       form.current,
       import.meta.env.VITE_PUBLIC_KEY,
-    )
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    );
+
+    // Execute the notification
+    toast.promise(
+      sendEmail,
+      {
+        loading: 'Sending email...',
+        success: <b>Email sent</b>,
+        error: <b>The email couldn&apos;t be sent</b>,
+      },
+    );
   };
 
   return (
