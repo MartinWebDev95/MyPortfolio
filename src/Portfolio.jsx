@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import SectionContact from './components/SectionContact';
 import SectionProjects from './components/SectionProjects';
 import SectionSkills from './components/SectionSkills';
+import Notification from './components/Notification';
 
 function Portfolio() {
   return (
@@ -21,6 +22,8 @@ function Portfolio() {
 
         <SectionContact />
       </main>
+
+      <Notification />
     </>
   );
 }
