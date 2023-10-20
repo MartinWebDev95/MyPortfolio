@@ -44,12 +44,33 @@ export default {
             opacity: 1,
           },
         },
+        animation_enter: {
+          from: {
+            transform: 'translateX(8rem)',
+          },
+
+          to: {
+            transform: 'translateX(0rem)',
+          },
+        },
+
+        animation_leave: {
+          from: {
+            transform: 'translateX(0rem)',
+          },
+
+          to: {
+            transform: 'translateX(20rem)',
+          },
+        },
       },
       animation: {
         blobs_animation_one: 'blobs_animation 30s linear infinite both',
         blobs_animation_two: 'blobs_animation 50s linear infinite both',
         title_animation: 'title_animation 2s linear 1 both',
         socials_animation: 'socials_animation 1s linear .5s 1 both',
+        animation_enter: 'animation_enter .3s linear 1 both',
+        animation_leave: 'animation_leave .3s linear 1 both',
       },
     },
   },
