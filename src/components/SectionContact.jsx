@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import toast from 'react-hot-toast';
 import ItemContent from './ItemContent';
 import useNearElement from '../hooks/useNearElement';
+import InputForm from './InputForm';
 
 function SectionContact() {
   const form = useRef();
@@ -43,41 +44,27 @@ function SectionContact() {
         </h2>
 
         <form ref={form} className="flex flex-col gap-4" onSubmit={handleSubmit}>
-          <label className="flex flex-col gap-2" htmlFor="email">
-            <span className="text-black dark:text-white font-bold">Name:</span>
 
-            <input
-              type="text"
-              name="username"
-              id="username"
-              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
-              placeholder="Your name"
-            />
-          </label>
+          <InputForm
+            label="Name: "
+            type="text"
+            placeholder="Your name"
+            name="username"
+          />
 
-          <label className="flex flex-col gap-2" htmlFor="topic">
-            <span className="text-black dark:text-white font-bold">Topic:</span>
+          <InputForm
+            label="Email: "
+            type="email"
+            placeholder="Your email"
+            name="email"
+          />
 
-            <input
-              type="text"
-              name="topic"
-              id="topic"
-              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
-              placeholder="Topic of the email"
-            />
-          </label>
-
-          <label className="flex flex-col gap-2" htmlFor="email">
-            <span className="text-black dark:text-white font-bold">Email:</span>
-
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
-              placeholder="Your email"
-            />
-          </label>
+          <InputForm
+            label="Topic: "
+            type="text"
+            placeholder="Your topic"
+            name="topic"
+          />
 
           <label className="flex flex-col gap-2" htmlFor="message">
             <span className="text-black dark:text-white font-bold">Message:</span>
