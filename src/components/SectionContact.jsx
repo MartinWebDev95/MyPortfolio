@@ -1,35 +1,21 @@
-import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
-import toast from 'react-hot-toast';
 import ItemContent from './ItemContent';
 import useNearElement from '../hooks/useNearElement';
-import InputForm from './InputForm';
+import useForm from '../hooks/useForm';
 
 function SectionContact() {
   const form = useRef();
+
+  const {
+    formValues,
+    formErrors,
+    handleSubmit,
+    handleChangeInput,
+    handleFocusInput,
+    handleBlurInput,
+  } = useForm({ form });
+
   const { visorRef, isVisible } = useNearElement();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Send the email
-    const sendEmail = emailjs.sendForm(
-      import.meta.env.VITE_SERVICE_ID,
-      import.meta.env.VITE_TEMPLATE_ID,
-      form.current,
-      import.meta.env.VITE_PUBLIC_KEY,
-    );
-
-    // Execute the notification
-    toast.promise(
-      sendEmail,
-      {
-        loading: 'Sending email...',
-        success: <b>Email sent</b>,
-        error: <b>The email couldn&apos;t be sent</b>,
-      },
-    );
-  };
 
   return (
     <section
@@ -45,37 +31,104 @@ function SectionContact() {
 
         <form ref={form} className="flex flex-col gap-4" onSubmit={handleSubmit}>
 
-          <InputForm
-            label="Name: "
-            type="text"
-            placeholder="Your name"
-            name="username"
-          />
+          <label className="flex flex-col gap-2" htmlFor="username">
+            <p className={`${formErrors.username !== '' ? 'text-red-600' : 'text-black dark:text-white'} font-bold flex items-center justify-between text-sm sm:text-base`}>
+              <span>
+                Name:
+              </span>
 
-          <InputForm
-            label="Email: "
-            type="email"
-            placeholder="Your email"
-            name="email"
-          />
+              {(formErrors.username !== '')
+                && (
+                <span>{formErrors.username}</span>
+                )}
+            </p>
 
-          <InputForm
-            label="Topic: "
-            type="text"
-            placeholder="Your topic"
-            name="topic"
-          />
+            <input
+              type="text"
+              name="username"
+              id="username"
+              value={formValues.username}
+              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
+              placeholder="Your name"
+              onFocus={handleFocusInput}
+              onBlur={handleBlurInput}
+              onChange={handleChangeInput}
+            />
+          </label>
+
+          <label className="flex flex-col gap-2" htmlFor="email">
+            <p className={`${formErrors.email !== '' ? 'text-red-600' : 'text-black dark:text-white'} font-bold flex items-center justify-between text-sm sm:text-base`}>
+              <span>
+                Email:
+              </span>
+
+              {(formErrors.email !== '')
+                && (
+                <span>{formErrors.email}</span>
+                )}
+            </p>
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={formValues.email}
+              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
+              placeholder="Your email"
+              onFocus={handleFocusInput}
+              onBlur={handleBlurInput}
+              onChange={handleChangeInput}
+            />
+          </label>
+
+          <label className="flex flex-col gap-2" htmlFor="topic">
+            <p className={`${formErrors.topic !== '' ? 'text-red-600' : 'text-black dark:text-white'} font-bold flex items-center justify-between text-sm sm:text-base`}>
+              <span>
+                Topic:
+              </span>
+
+              {(formErrors.topic !== '')
+                && (
+                <span>{formErrors.topic}</span>
+                )}
+            </p>
+
+            <input
+              type="text"
+              name="topic"
+              id="topic"
+              value={formValues.topic}
+              className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
+              placeholder="Your topic"
+              onFocus={handleFocusInput}
+              onBlur={handleBlurInput}
+              onChange={handleChangeInput}
+            />
+          </label>
 
           <label className="flex flex-col gap-2" htmlFor="message">
-            <span className="text-black dark:text-white font-bold">Message:</span>
+            <p className={`${formErrors.message !== '' ? 'text-red-600' : 'text-black dark:text-white'} font-bold flex items-center justify-between text-sm sm:text-base`}>
+              <span>
+                Message:
+              </span>
+
+              {(formErrors.message !== '')
+                && (
+                <span>{formErrors.message}</span>
+                )}
+            </p>
 
             <textarea
               name="message"
               id="message"
               cols="30"
               rows="10"
+              value={formValues.message}
               className="rounded-md border-2 border-white dark:border-black bg-black dark:bg-white text-white dark:text-black p-1 px-2 placeholder:dark:text-black/70"
               placeholder="Write your message"
+              onFocus={handleFocusInput}
+              onBlur={handleBlurInput}
+              onChange={handleChangeInput}
             />
           </label>
 
