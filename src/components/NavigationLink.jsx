@@ -9,7 +9,10 @@ function NavigationLink({ text, setIsMenuOpen }) {
         smooth
         offset={-100}
         duration={500}
-        onClick={() => setIsMenuOpen(false)}
+        onClick={() => {
+          setIsMenuOpen(false);
+          document.body.style.overflow = 'auto';
+        }}
         className="flex items-center text-black dark:text-white font-bold lg:text-xl relative"
       >
         <ItemContent value={text} />
