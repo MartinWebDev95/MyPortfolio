@@ -3,6 +3,7 @@ import ToggleTheme from './ToggleTheme';
 import MenuMobile from './MenuMobile';
 import Navigation from './Navigation';
 import useOpacity from '../hooks/useOpacity';
+import ChangeLanguage from './ChangeLanguage';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,9 @@ function Header() {
 
         <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
-        <div>
+        <div className="flex gap-2 relative">
+          <ChangeLanguage />
+
           <ToggleTheme />
         </div>
       </div>
