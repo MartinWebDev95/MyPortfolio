@@ -1,8 +1,11 @@
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import useLanguageContext from './useLanguageContext';
 
 const useForm = ({ form }) => {
+  const { text } = useLanguageContext();
+
   const [formValues, setFormValues] = useState({
     username: '',
     email: '',
@@ -39,27 +42,27 @@ const useForm = ({ form }) => {
     if (e.target.value === '') {
       setFormErrors({
         ...formErrors,
-        [e.target.name]: 'Field cannot be empty',
+        [e.target.name]: text.contact.error,
       });
     } else if ((e.target.name === 'username') && (!e.target.value.match(regexName))) {
       setFormErrors({
         ...formErrors,
-        [e.target.name]: 'This is not a correct name',
+        [e.target.name]: text.contact.nameInput.error,
       });
     } else if ((e.target.name === 'email') && (!e.target.value.match(regexEmail))) {
       setFormErrors({
         ...formErrors,
-        [e.target.name]: 'This is not a correct email',
+        [e.target.name]: text.contact.emailInput.error,
       });
     } else if ((e.target.name === 'topic') && (!e.target.value.match(regexText))) {
       setFormErrors({
         ...formErrors,
-        [e.target.name]: 'This is not a correct topic',
+        [e.target.name]: text.contact.topicInput.error,
       });
     } else if ((e.target.name === 'message') && (!e.target.value.match(regexText))) {
       setFormErrors({
         ...formErrors,
-        [e.target.name]: 'This is not a correct message',
+        [e.target.name]: text.contact.messageInput.error,
       });
     } else {
       setFormErrors({
@@ -78,7 +81,7 @@ const useForm = ({ form }) => {
 
       Object.entries(formValues).forEach((item) => {
         if (item[1] === '') {
-          newObject = { ...newObject, [item[0]]: 'Field cannot be empty' };
+          newObject = { ...newObject, [item[0]]: text.contact.error };
         } else {
           newObject = { ...newObject, [item[0]]: formErrors[item[0]] };
         }
@@ -105,9 +108,9 @@ const useForm = ({ form }) => {
     toast.promise(
       sendEmail,
       {
-        loading: 'Sending email...',
-        success: 'Email sent',
-        error: 'The email couldn&apos;t be sent',
+        loading: text.notification.loading,
+        success: text.notification.success,
+        error: text.notification.error,
       },
     );
   };
