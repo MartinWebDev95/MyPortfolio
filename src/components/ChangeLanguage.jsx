@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import useLanguageContext from '../hooks/useLanguageContext';
 
 function ChangeLanguage() {
   const [isHidden, setIsHidden] = useState(true);
+  const { text, handleChangeLanguage } = useLanguageContext();
 
   return (
     <>
@@ -35,18 +37,30 @@ function ChangeLanguage() {
 
       <div className={`${isHidden ? 'hidden' : 'flex'} items-center gap-2 absolute dark:bg-black dark:text-white bg-white text-black font-semibold pt-3 px-3 pb-1 top-9 right-6 md:right-10 rounded-lg shadow-lg text-md`}>
         <div>
-          <p className="whitespace-nowrap mb-1">Choose the language: </p>
+          <p className="whitespace-nowrap mb-1">{text.language}</p>
 
           <ul className="flex items-center gap-4 justify-center">
             <li>
-              <button type="button">
+              <button
+                type="button"
+                onClick={() => {
+                  handleChangeLanguage('es');
+                  setIsHidden(true);
+                }}
+              >
                 <span className="sr-only">Spanish</span>
                 <img src="/assets/flag-spain.svg" alt="Spain Flag" className="w-9 h-9" />
               </button>
             </li>
 
             <li>
-              <button type="button">
+              <button
+                type="button"
+                onClick={() => {
+                  handleChangeLanguage('en');
+                  setIsHidden(true);
+                }}
+              >
                 <span className="sr-only">English</span>
                 <img src="/assets/flag-usa.svg" alt="USA Flag" className="w-9 h-9" />
               </button>
