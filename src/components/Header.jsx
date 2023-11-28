@@ -16,7 +16,7 @@ function Header() {
 
         <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
-        <div className="flex gap-2 relative">
+        <div className="flex gap-2 md:gap-4 relative">
           <ChangeLanguage />
 
           <ToggleTheme />
