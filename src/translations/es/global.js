@@ -1,5 +1,5 @@
 const globalEs = {
-  language: 'Cambiar idioma: ',
+  language: 'Elige el idioma: ',
   navigation: {
     firstItem: 'Inicio',
     secondItem: 'Proyectos',
